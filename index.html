@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pingtung Open Match Schedule</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f3f7f5;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: white;
+      padding: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #2f7e6d;
+    }
+
+    select {
+      display: block;
+      margin: 20px auto;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #2f7e6d;
+      color: white;
+    }
+
+    .pink {
+      background-color: #ffe0ef;
+      color: #b0005b;
+      font-weight: bold;
+    }
+
+    .blue {
+      background-color: #d4eafd;
+      color: #004d99;
+      font-weight: bold;
+    }
+
+    .break {
+      background-color: #f1fce4;
+      color: #6b8c42;
+      font-style: italic;
+      font-weight: 600;
+    }
+
+    .schedule {
+      display: none;
+    }
+
+    .visible {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>AVC Beach Tour Pingtung Open<br>Match Schedule</h1>
+
+    <select id="daySelect" onchange="showSchedule()">
+      <option value="day1">Day 1 – 17 July 2025</option>
+      <option value="day2">Day 2 – 18 July 2025</option>
+      <option value="day3" selected>Day 3 – 19 July 2025</option>
+      <option value="day4">Day 4 – 20 July 2025</option>
+    </select>
+
+    <div id="day1" class="schedule">
+      <table>
+        <tr><th>Time</th><th>Center Court</th><th>Court 2</th><th>Court 3</th><th>Court 4</th></tr>
+        <tr><td>08:30</td><td class="pink">MD-PD JPN2 v TPE2</td><td class="pink">MD-PF VAN v HKG2</td><td></td><td></td></tr>
+        <tr><td>09:20</td><td class="pink">MD-PH TPE1 v AUS3</td><td class="pink">MD-PG THA2 v HKG1</td><td class="pink">MD-PE THA1 v KOR</td><td></td></tr>
+        <tr><td>10:10</td><td class="blue">MD-PD THA3 v TPE2</td><td class="blue">MD-PA AUS1 v KOR1</td><td class="blue">MD-PB AUS2 v SGP</td><td class="blue">MD-PC THA1 v KOR2</td></tr>
+        <tr><td>11:00</td><td class="blue">MD-PH TPE1 v HKG2</td><td class="blue">MD-PE JPN1 v KSA2</td><td class="blue">MD-PF AUS3 v VIE2</td><td class="blue">MD-PG JPN2 v MAS2</td></tr>
+        <tr><td colspan="5" class="break">Break</td></tr>
+        <tr><td>13:30</td><td class="pink">MD-PD INA1 v TPE2</td><td class="pink">MD-PF SGP1 v HKG2</td><td class="pink">MD-PG JPN3 v HKG1</td><td class="pink">MD-PE SGP2 v KOR</td></tr>
+        <tr><td>14:20</td><td class="blue">MD-PD QAT1 v TPE2</td><td class="blue">MD-PA MAS1 v KOR1</td><td class="blue">MD-PB HKG1 v SGP</td><td class="blue">MD-PC KSA1 v KOR2</td></tr>
+        <tr><td>16:00</td><td class="blue">MD-PF NMI v VIE2</td><td class="blue">MD-PE QAT2 v KSA2</td><td class="blue">MD-PH THA2 v HKG2</td><td class="blue">MD-PG VIE1 v MAS2</td></tr>
+      </table>
+    </div>
+
+    <div id="day2" class="schedule">
+      <table>
+        <tr><th>Time</th><th>Center Court</th><th>Court 2</th><th>Court 3</th><th>Court 4</th></tr>
+        <tr><td>08:30</td><td class="blue">MD-PA AUS1 v INA2</td><td class="pink">MD-PB AUS2 v VIE2</td><td class="pink">MD-PC JPN1 v VIE1</td><td class="pink">MD-PD JPN2 v INA1</td></tr>
+        <tr><td>09:20</td><td class="pink">MD-PH TPE1 v THA3</td><td class="pink">MD-PE THA1 v SGP2</td><td class="blue">MD-PG THA2 v JPN3</td><td class="pink">MD-PF VAN v SGP1</td></tr>
+        <tr><td>10:10</td><td class="blue">MD-PA AUS1 v MAS1</td><td class="blue">MD-PB AUS2 v HKG1</td><td class="blue">MD-PC THA1 v KSA1</td><td class="blue">MD-PD THA3 v QAT1</td></tr>
+        <tr><td>11:00</td><td class="blue">MD-PH TPE1 v THA2</td><td class="blue">MD-PF AUS3 v NMI</td><td class="blue">MD-PG JPN2 v VIE1</td><td class="blue">MD-PE JPN1 v QAT2</td></tr>
+        <tr><td colspan="5" class="break">Break / Drawing of lots for round of 16 (Women’s 10:00 / Men’s 12:00)</td></tr>
+        <tr><td>13:30</td><td class="pink">R16-W JPN1 v HKG2</td><td class="pink">R16-W AUS1 v VIE1</td><td class="pink">R16-W INA1 v AUS2</td><td class="pink">R16-W SGP2 v JPN2</td></tr>
+        <tr><td>14:20</td><td class="pink">R16-W TPE1 v THA1</td><td class="pink">R16-W JPN3 v VIE2</td><td class="pink">R16-W INA2 v VAN</td><td class="pink">R16-W THA3 v THA2</td></tr>
+        <tr><td>15:10</td><td class="blue">R16-M THA1 v QAT1</td><td class="blue">R16-M AUS1 v VIE1</td><td class="blue">R16-M KSA1 v AUS2</td><td class="blue">R16-M MAS1 v JPN1</td></tr>
+        <tr><td>16:00</td><td class="blue">R16-M AUS3 v TPE1</td><td class="blue">R16-M JPN2 v QAT2</td><td class="blue">R16-M NMI v THA2</td><td class="blue">R16-M HKG1 v THA3</td></tr>
+      </table>
+    </div>
+
+    <div id="day3" class="schedule visible">
+      <table>
+        <tr><th>Time</th><th>Center Court</th><th>Court 2</th></tr>
+        <tr><td>08:30</td><td class="pink">QF1-W AUS1 v VAN</td><td class="pink">QF2-W THA1 v JPN2</td></tr>
+        <tr><td>09:20</td><td class="pink">QF4-W JPN3 v AUS2</td><td class="pink">QF3-W JPN1 v THA3</td></tr>
+        <tr><td>10:10</td><td class="blue">QF1-M AUS1 v JPN1</td><td class="blue">QF2-M NMI v HKG1</td></tr>
+        <tr><td>11:00</td><td class="blue">QF3-M QAT1 v JPN2</td><td class="blue">QF4-M AUS3 v AUS2</td></tr>
+        <tr><td colspan="3" class="break">Break</td></tr>
+        <tr><td>13:30</td><td class="pink">SF-W AUS1 v THA1</td><td></td></tr>
+        <tr><td>14:30</td><td class="pink">SF-W AUS2 v JPN1</td><td></td></tr>
+        <tr><td>15:30</td><td class="blue">SF-M AUS1 v NMI</td><td></td></tr>
+        <tr><td>16:30</td><td class="blue">SF-M JPN2 v AUS3</td><td></td></tr>
+      </table>
+    </div>
+
+    <div id="day4" class="schedule">
+      <table>
+        <tr><th>Time</th><th>Center Court</th></tr>
+        <tr><td>13:30</td><td class="pink">3rd</td></tr>
+        <tr><td>14:30</td><td class="blue">3rd</td></tr>
+        <tr><td>15:30</td><td class="blue">1st</td></tr>
+        <tr><td>16:30</td><td class="blue">1st</td></tr>
+        <tr><td>Following by</td><td>Awarding Ceremony</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    function showSchedule() {
+      const days = ['day1', 'day2', 'day3', 'day4'];
+      const selected = document.getElementById("daySelect").value;
+      days.forEach(id => {
+        document.getElementById(id).classList.remove("visible");
+      });
+      document.getElementById(selected).classList.add("visible");
+    }
+  </script>
+</body>
+</html>
